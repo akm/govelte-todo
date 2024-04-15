@@ -6,7 +6,7 @@ import { createConnectTransport } from '@connectrpc/connect-web';
 import { Status } from '../gen/task/v1/task_pb';
 
 export async function load(event: ServerLoadEvent): Promise<{ tasks: Task[] }> {
-	console.log('load: event', event);
+	console.log('load: event.constructor', event.constructor);
 
 	const transport = createConnectTransport({ baseUrl: 'http://localhost:8080' });
 
